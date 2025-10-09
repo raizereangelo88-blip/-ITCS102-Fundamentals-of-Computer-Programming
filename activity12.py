@@ -1,4 +1,3 @@
-for cycle in range(1,20,1):
-     print("BSIT 1C")
-     print("Magandang hapon")
-           
+#Print magandang hapon bsit 1C 10 times 
+
+for loop 

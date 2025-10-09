@@ -1,3 +1,7 @@
-for i in range(20,0,-1):
-    print(i)
-    
+Factiorial = 120
+for i in range(5,-1,1):
+    print (i)
+    val = i 
+    number = eval(input("Enter number --> "))
+    n
+   
