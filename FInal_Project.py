@@ -24,13 +24,17 @@ while True:  # Loop forever until the user chooses to exit
         
         # Check what the user chose and call the right function
         if choice == "1":
+                os.system('cls')
                 print("1 - Print Function")
                 print("2 - Input Function")
                 print("3 - Def Function")
                 print("4 - Eval Function")
                 x = input("What would you like to choose?: ")
                 if x == "1":
+                        os.system('cls')
                         print("The print function allows the user to output information from the program to the user or developer.\n Hello World")
+                        input("Press to ENTER to go back")
+                        os.system('cls')
                         continue
                 elif x == "2":
                         print("The input function allows the user to input a data in the console and the program reads it")
@@ -43,3 +47,13 @@ while True:  # Loop forever until the user chooses to exit
                         print("The eval function  Its primary purpose is to allow dynamic execution of code from strings, such as in calculators, configuration parsers, or interactive shells.")
                         something = eval(input("Input number --> "))
                         continue
+
+        
+        
+    
+                
+                
+
+        elif choice == "6":
+                print("YOU HAVE EXITED THE PROGRAM")
+                break
