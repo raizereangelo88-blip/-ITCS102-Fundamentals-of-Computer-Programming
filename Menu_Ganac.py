@@ -2,7 +2,6 @@
 #BSIT - 1C ----- RAIZERE GANAC
 #ITCS102 - FINAL PROJECT
 #MENU.PY
-
 import time
 import os
 
@@ -12,22 +11,223 @@ def clear_sc():
 
 def tap():
     
-    Esc = input("\n\nPress Enter to show the Examples: ")
+    Esc = input("\n\nPress ENTER to show the Examples: ")
     if Esc == "":
-        print("\n\n\t\t\t---Example Code---")
+        print("\n\n\t\t\t----->Example Code<-----")
         print()
+
+def option1():
+    time.sleep(0.5)
+    print ("\n\n\t\tTypes of Comments in Python")
+    print("\n\t\t\t\t\t_option_")
+    print("\n\t\t\ta\t---\tSingle-line Comment\n\t\t\tb\t---\tMulti-line Comment\n\t\t\tc\t---\tExamples\n\t\t\td\t---\tExit")
+            
+def option2():
+    print("\n\n\t\t\t1\t---\tExamples")
+    print("\t\t\t2\t---\tExit")
+    
+#----------Print Function----------
+def print_F():
+    
+    import time
+    isFunction = True
+
+    while isFunction == True:
+        print()
+        print("\t\t\t\t----->Print Statement<-----")
+        print()
+        print("\n\t\t\t\t\t_option_")
+        print("\n\t\t\ta\t---\tComment")
+        print("\t\t\tb\t---\tVariables")
+        print("\t\t\tc\t---\tData Types")
+        print("\t\t\td\t---\tUser Input")
+        print("\t\t\te\t---\tExit")
+        print()
+        time.sleep(0.5)
+        menu= input("Choose in the Following: ")
+        clear_sc()
+
+        if menu.lower() == 'a':
+            print()
+            print("\t\t\t\t----->Comment<-----")
+            print("")
+            text4 = ("\tComments in Python are pieces of text that are ignored by the Python interpreter. They are\n\tused to Explain the code to reader, or to disable code that you don't want to run.") 
+            for char in text4:
+                print(char,end="",flush=True)
+                time.sleep(0.01)
+            
+            #Type of Comments in Python
+            option1()
+            
+            stay_menu1 = True
+            while stay_menu1:
+                comment = input("\n\nChoose in the Following: ")
+                clear_sc()
+
+                if comment.lower() == 'a':
+                    print("\n\n\t\t\t----->Single-Line Comment<-----")
+                    print("\t● Start with a hashtag symbol (#) and go to the end of the line.")
+                    clear_sc()
+                    option1()
+
+                elif comment.lower() == 'b':
+                    print("\n\n\t\t\t----->Multi-Line Comment<------")
+                    print('''\t● Start with three double quotes(""") and end with three double quotes''')
+                    clear_sc()
+                    option1()
+                    
+                elif comment.lower() == 'c':
+                    print("\n\n\t\t\t----->Examples<-----")
+                    print("\n\t---Single-Line Comments---")
+                    print('''\t\t#This is a Single-Line Comment''')
+                    print("\n\t----->Multi-Line Comments<-----")
+                    print('''\t\t"""
+                    This is a multi-line cooment.
+                    """ ''')
+                    clear_sc()
+                    option1()
+
+                elif comment.lower() == 'd':
+                    print("\n\t\t\t\t\t----->Exit<-----")
+                    stay_menu1 = False
+                
+                else:
+                    print ("\n\t\t\t\t= Invalid Input =\n")
+                    
+                    option1()
+                
+        
+        elif menu.lower() == 'b':
+            print()
+            stay_menu2 = True
+            while stay_menu2:
+                print("\t\t\t\t----->Variables<-----")
+                print("")
+                text5 = ("\t● Variables in programming are like named boxes that can store information.\n\t You can use variables to store any type of data, such as numbers,\n\t strings, lists, and objects.") 
+                for char in text5:
+                    print(char,end="",flush=True)
+                    time.sleep(0.01)
+
+                option2()
+
+
+                ask = input("\n\n\t\tChoose in the following: ")
+                if ask == '1':
+                    print("\n\n\t\t----->Examples<-----")
+                    print("\n\t\t my_name = John \n\t\t i = 20\n\t\t isContinue = True")
+                    clear_sc()
+                    
+                elif ask == '2':
+                    print("\n\t\t\t\t\t----->Exit<-----")
+                    clear_sc()
+                    stay_menu2 = False
+                    
+                else:
+                    print ("\n\t\t\t\t= Invalid Input =\n")
+                    
+            
+        elif menu.lower() == 'c':
+            print()
+            stay_menu3 = True
+            while stay_menu3:
+                print("\t\t\t\t----->Data types<-----")
+                text6 = ("\n\n\tPython data types identify the type of data that a variable can store. ")
+                for char in text6:
+                    print(char,end="",flush=True)
+                    time.sleep(0.01)
+                print ("\n\tPython has the following data types built-in by default\n")
+                print ("\t\t● Integers\t===\tint (123,1000)")
+                print ('''\t\t● String\t===\tstr ("Hello",'Word', "2005")''')
+                print ("\t\t● Float\t\t===\tfloat (1.50,2005.20)")
+                print ("\t\t● Boolean\t===\tbool (True,False)")
+                
+                    #===Examples===
+                ask_ex = input("\n\n\t\tPress Enter to show the Examples [x] to exit: ")
+
+                if ask_ex == "":
+                    print("\n\n----->Example Code<-----")
+
+                    print("\n\n\t==INPUT==")
+                    print('''\n\tage = 20 # ---Integer''')
+                    print('''\n\tprice = 19.99  # ---Float''')
+                    print('''\n\tname = "Marcus"  # ---String''')
+                    print('''\n\tisStudent = True  # ---Float\n\n''')
+
+                    print('''\tprint("Age: ", age) ''')
+                    print('''\tprint("Price: ", price)''')
+                    print('''\tprint("Name: ",name)''')
+                    print('''\tprint("Is Student: ", isStudent)''')
+
+                    print("\n\n\t==OUTPUT==")
+                    print('''\n\tAge: 20 ''')
+                    print('''\n\tPrice: 19.99 ''')
+                    print('''\n\tName:Marcu;s  ''')
+                    print('''\n\tIs Student: True \n\n''')
+                    clear_sc()
+
+                elif ask_ex.lower()== 'x':
+                    print("\n\t\t\t=====EXIT=====")
+                    clear_sc()
+                    stay_menu3 = False
+
+                else:
+                    print("==Just Press Enter key on your Keyboard==")
+            
+        elif menu.lower() == 'd':
+            print()
+            stay_menu4 = True
+            while stay_menu4:
+                print("\t\t\t\t----->User Input<-----")
+                text7 = ('''\n\n\tPython provides the input() function.input() reads what 
+            the user types on the keyboard and return it as a string \n\n''')
+                for char in text7:
+                    print(char,end="",flush=True)
+                    time.sleep(0.01)
+                ask_ex3 = input("\n\n\t\tPress Enter to show the Examples [x] to exit: ")
+
+                if ask_ex3 == "":
+                    print("\n\n\t\t----->Example Code<-----")
+                    print()
+                    name = input("\tEnter your name: ")
+
+                    print("\n\tHi, ",name," Welcome to my program!")
+                    print("\n\n\t===================Code===========================")
+                    time.sleep(1)
+                    print("\n\t=====INPUT=====")
+
+                    print('''\t name = input("Enter your name: ")
+                    print("Hi,",name," Welcome to my program!) ''')
+                    time.sleep(1)
+                    print("\n\n\t=====OUTPUT=====")
+                    print('''Hi,(your input) Welcome to my program!''' )
+                    clear_sc()
+            
+                elif ask_ex3.lower()== 'x':
+                    print("\n\t\t\t=====Exit=====")
+                    clear_sc()
+                    stay_menu4 = False
+                else: 
+                    print ("\n\t\t\t\t= Invalid Input =\n")
+        
+        elif menu.lower() == 'e':
+            print ("\n\t\t\t\t= Exit =\n")
+            isFunction = False
+
+        else:
+            print ("\n\t\t\t\t= Invalid Input =\n")
+
 #-------------------OPERATORS---------------------------
 def operator():
     isCorrect = True
     while isCorrect == True:
         time.sleep(0.3)
-        print(f"\n\n\t\t\t----Python Operators----")
+        print(f"\n\n\t\t\t----->Python Operators<-----")
         print("\n\n\t\t\t\t_option_\n\n\t\t\ta\t---\tDefinition\n\t\t\tb\t---\tTypes\n\t\t\tc\t---\tExit")
         time.sleep(1)
         operator = input("\n\t\tChoose in the following: ")
 
         if operator.lower() == 'a':
-            print("\n\n\t\t\t\t----Python Operators----")
+            print("\n\n\t\t\t\t----->Python Operators<-----")
             print("")
             text8 = ('''\n\tOperators are used to perform operations on variables and values.
          ''')
@@ -48,7 +248,7 @@ def operator():
             stay_menu5 = True
             while stay_menu5: 
                 time.sleep(0.5)
-                print("\n\n\t\t\t===Option===")
+                print("\n\n\t\t\t=====Option=====")
                 print('''\n\t\t    a\t---\tArithmetic operators
                     b\t---\tAssignment operators
                     c\t---\tComparison operators
@@ -60,7 +260,7 @@ def operator():
 
                 if ask_Opera.lower() == 'a':
 
-                    print ("\n\t\t\t==Arithmetic Operators==") 
+                    print ("\n\t\t\t=====Arithmetic Operators=====") 
 
                     text10 = ('''\n\tArithmetic operators are used with numeric values to perform common 
                             mathematical operations:
@@ -79,7 +279,7 @@ def operator():
 
                     print("\t\tthe sum of ", num, "+",numb," = ",sum)
 
-                    print("\n\n\t\t\t==INPUT==")
+                    print("\n\n\t\t\t=====INPUT=====")
                     print('''\n\n\tnum = eval(input("Enter a number --> "))
             numb = eval(input("Enter second number --> "))
 
@@ -89,10 +289,8 @@ def operator():
     ''')
                     clear_sc()
 
-
-
                 elif ask_Opera.lower() == 'b':
-                    print ("\n\t\t\t==Assignment Operators==")
+                    print ("\n\t\t\t=====Assignment Operators=====")
                     text11 = ('''\n\tAssignment operators are used to assign values to variables:
                                 =
                                 +=
@@ -128,7 +326,7 @@ def operator():
                     print ("\t",x)
                     
                     time.sleep(0.5)
-                    print("\n\n\t\t\t==INPUT==")
+                    print("\n\n\t\t\t=====INPUT=====")
                     print('''\n\n\tx = 5
 
             print (x)
@@ -154,7 +352,7 @@ def operator():
                 
                 elif ask_Opera.lower() == 'c':
                     3
-                    print ("\n\t\t\t==Comparison operators==")
+                    print ("\n\t\t\t=====Comparison operators=====")
                     text12 = ('''\n\tComparison operators are used to compare two values:
                             
                         Operator\tName
@@ -204,15 +402,15 @@ def operator():
                         print ("\t\tYour age is categorized as Senior")
 
                     time.sleep(0.5)
-                    print("\n\n\t\t\t==INPUT==")
+                    print("\n\n\t\t\t=====INPUT=====")
                     print('''\n\n\tAge = eval(input(" Enter your age ---> "))
 
                     #1-7 - Toddler
-                    #8-13 - pre teen
+                    #8-13 - pre-teen
                     #14-18 - teenager
-                    #19-31 - early adulthood
-                    #32-45 - Mid adulthood
-                    #46-59 - post adulthood
+                    #19-31 - early-adulthood
+                    #32-45 - Mid-adulthood
+                    #46-59 - post-adulthood
                     #60 + - senior
 
                     if Age <= 7:
@@ -237,7 +435,7 @@ def operator():
                         print ("Your age is categorized as Senior")
     ''')
                     
-                    print("\n\n\t===Exit===")
+                    print("\n\n\t=====Exit=====")
                     clear_sc()
 
                 elif ask_Opera.lower() == 'd':
@@ -269,7 +467,7 @@ def operator():
                         print (f"\n\tHi {miner}, Your total number of gold is {gold}") 
                     
                     time.sleep(0.5)
-                    print("\n\n\t\t\t==INPUT==")
+                    print("\n\n\t\t\t=====INPUT=====")
                     print('''\n\n\tgold = 0
 
                     miner = input("\n\n\tHi, What is your name: ")
@@ -292,7 +490,6 @@ def operator():
                     stay_menu5 = False
 
 
-
         elif operator.lower() == 'c':
             print ("\n\t\t\t\t= Exit =\n")
             clear_sc()
@@ -307,7 +504,7 @@ def conditional_St():
     isTama = True
     while isTama == True:
         time.sleep(0.3)
-        print(f"\n\n\t\t\t----Conditional Statements----")
+        print(f"\n\n\t\t\t----->Conditional Statements<-----")
 
         print("\n\n\t\t\t\t_option_\n\n\t\t\ta\t---\tDefinition\n\t\t\tb\t---\tNested Condition\n\t\t\tc\t---\tExit")
         
@@ -315,7 +512,7 @@ def conditional_St():
         con_Sta = input("\n\t\tChoose in the following: ")
 
         if con_Sta.lower() == 'a':
-            print("\n\n\t\t\t\t----Conditional Statements----")
+            print("\n\n\t\t\t\t----->Conditional Statements<-----")
             print("")
             text13 = ('''\n\tConditional statements (if, else, and elif) are fundamental programming 
         constructs that allow you to controlthe flow of your program based on conditions 
@@ -329,30 +526,22 @@ def conditional_St():
             print()
             tap()
             name = input("\tEnter your name ---> ")
-            password = input("\tEnter your password (helloworld , kaya_ko) ---> ")
+            password = input("\tEnter your password (pikachu123) ---> ")
 
-            if password.lower() == "helloworld":
-                print ("\tAccess Granted")
-                print (f"\tHi,{name} I hope You enjoy the system")
-
-            elif password.lower() == "kaya_ko":
+            if password.lower() == "pikachu123":
                 print ("\tAccess Granted")
                 print (f"\tHi,{name} I hope You enjoy the system")
 
             else :
-                print ("\n\n\t\t==Access Denied==")
+                print ("\n\n\t\t=====Access Denied=====")
 
             print("\n\n\tsystem exit")
             
-            print("\n\n\t\t\t==INPUT==")
+            print("\n\n\t\t\t=====INPUT=====")
             print('''\n\n\tname = input("Enter your name ---> ")
-                password = input("Enter your password (helloworld , kaya_ko) ---> ")
+                password = input("Enter your password (pikachu123) ---> ")
 
-                if password.lower() == "helloworld":
-                    print ("Access Granted")
-                    print (f"Hi,{name} I hope You enjoy the system")
-
-                elif password.lower() == "kaya_ko":
+                if password.lower() == "pikachu123":
                     print ("Access Granted")
                     print (f"Hi,{name} I hope You enjoy the system")
 
@@ -368,7 +557,7 @@ def conditional_St():
 
         
         elif con_Sta.lower() == 'b':
-            print("\n\n\t\t\t\t----Nested Condition----")
+            print("\n\n\t\t\t\t----->Nested Condition<-----")
             print("")
             text14 = ('''\n\tThe nested if statements in Python are the nesting of an if
         statement inside another if statement with or without an else statement.
@@ -787,16 +976,6 @@ def List():
 
             continue
     
-
-
-
-    
-
-
-
-
-
-
 def menu():
     print("")
     text20 = ('''\t\t\t=====Welcome to my code compiler final project and a simple guide on Python programming!=====
@@ -814,52 +993,52 @@ def menu():
 
 def Me_nu():
     print('''\n\n\t\t\t-->>>Main Menu<<<--
-
-        [1] --> Operators
-        [2] --> Conditional Statements
-        [3] --> Lops
-        [4] --> Functions
-        [5] --> Lists
-        [6] --> Code Challenges
+          
+        [1] --> Print Statements
+        [2] --> Operators
+        [3] --> Conditional Statements
+        [4] --> Lops
+        [5] --> Functions
+        [6] --> Lists
         [7] --> Exit
     ''')
     print ()
-
-     
+   
 menu()
 while True:
     Me_nu()
 
     main_menu = input("Enter your choice here: ")
 
+
     if main_menu == '1':
+        clear_sc()
+        print_F()
+
+
+    if main_menu == '2':
         clear_sc()
         operator()
         
 
-    elif main_menu == '2':
+    elif main_menu == '3':
         clear_sc()
         conditional_St()
         
         
-    elif main_menu == '3':
+    elif main_menu == '4':
         clear_sc()
         Looping()
         
 
-    elif main_menu == '4':
+    elif main_menu == '5':
         clear_sc()
         func_tion()
         
 
-    elif main_menu == '5':
-        clear_sc()
-        List()
-        
-
     elif main_menu == '6':
         clear_sc()
-        #Code_Challneges()
+        List()
         
         
     elif main_menu == '7':
