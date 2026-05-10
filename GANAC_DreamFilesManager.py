@@ -19,13 +19,21 @@ def append_text(new_message):
         dreamfile.write(f"{new_message}\n")
 
 def third_choice():
+    inspiring_message = (
+        "Dream Big: I want to become a skilled programmer who builds systems that help people.\n"
+        "Stay Curious: I will keep learning even when things get difficult.\n"
+        "Embrace Failure: Every error is a step closer to success.\n"
+        "Create Impact: I want my code to solve real-world problems.\n"
+        "Be Consistent: Small progress every day leads to big results.\n"
+        "Believe in Yourself: I am capable of learning and growing. Someday we will be free"
+    )
+
     while True:
-        warning_choice = input(typewriter("Warning: You'll be overwriting the existing file. Proceed? Y/N: "))
+        warning_choice = input(typewriter("WARNING!: You'll be overwriting the existing file. Proceed? Yes?/No?: "))
 
         if warning_choice.lower() == "y":
-            message = input("Enter your new inspiring message: ")
-            rewrite_text(message)
-            typewriter("\nDreams overwritten")
+            rewrite_text(inspiring_message)
+            typewriter("\nDreams overwritten with your goals.")
             break
         elif warning_choice.lower() == "n":
             typewriter("\nAction cancelled.")
@@ -66,8 +74,3 @@ def main():
             first_choice()
 
 main()
-
-
-
-
-
